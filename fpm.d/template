@@ -12,10 +12,10 @@ pm.max_spare_servers = 10
 pm.max_requests = 10240
 pm.status_path = /status
 
-slowlog = log/$pool.log.slow
+slowlog = /data0/logs/php-fpm/$pool.log.slow
 request_slowlog_timeout = 3
 
 php_admin_value[open_basedir] = /data0/web/$pool:/tmp
 ;php_admin_flag[display_errors] = on
-;php_admin_value[error_log] = log/$pool.error.log
+;php_admin_value[error_log] = /data0/logs/php-fpm/$pool.error.log
 ;php_admin_flag[log_errors] = on
